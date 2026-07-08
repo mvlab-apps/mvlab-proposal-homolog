@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#121212">
+<title>MVLAB — Propostas</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --golden:#FFC525; --blue:#0B82D2; --black:#121212; --white:#F6F6F4; --violet:#7B10C1;
+  --muted:#8a8a86; --card:#1c1c1c; --card2:#232323; --line:rgba(255,255,255,.09);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  --safe-t: env(safe-area-inset-top, 0px);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overscroll-behavior:none}
+body{
+  background:var(--black); color:var(--white); font-family:'DM Sans',sans-serif;
+  display:flex; flex-direction:column; height:100vh; height:100dvh; overflow:hidden;
+}
+h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:.3px}
+input,textarea,button{font-family:inherit; color:inherit}
+input,textarea{background:var(--card2); border:1px solid var(--line); border-radius:10px; color:var(--white); outline:none}
+input:focus,textarea:focus{border-color:var(--golden)}
+button{cursor:pointer; border:none; background:none}
+::-webkit-scrollbar{display:none}
+
+/* ── TOP BAR ── */
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:calc(10px + var(--safe-t)) 16px 10px; background:var(--black);
+  border-bottom:1px solid var(--line); flex-shrink:0; z-index:20;
+}
+.topbar img{height:22px; display:block}
+.topbar .cfg-btn{width:36px; height:36px; border-radius:50%; background:var(--card2); display:flex; align-items:center; justify-content:center; font-size:16px}
+
+/* ── SCREENS ── */
+.screens{flex:1; position:relative; overflow:hidden}
+.screen{
+  position:absolute; inset:0; overflow-y:auto; -webkit-overflow-scrolling:touch;
+  opacity:0; pointer-events:none; transform:translateX(12px); transition:opacity .18s ease, transform .18s ease;
+  padding-bottom:calc(90px + var(--safe-b));
+}
+.screen.active{opacity:1; pointer-events:auto; transform:translateX(0)}
+
+/* ── CATALOG SCREEN ── */
+.search-wrap{position:sticky; top:0; background:var(--black); padding:12px 16px 8px; z-index:5}
+.search-box{
+  display:flex; align-items:center; gap:8px; background:var(--card2); border:1px solid var(--line);
+  border-radius:12px; padding:11px 14px;
+}
+.search-box input{background:none; border:none; flex:1; font-size:15px; padding:0}
+.search-box .ic{opacity:.5; font-size:15px}
+.cat-scroll{display:flex; gap:8px; overflow-x:auto; padding:10px 16px 4px; -webkit-overflow-scrolling:touch}
+.cat-chip{
+  flex-shrink:0; padding:7px 15px; border-radius:20px; background:var(--card2); border:1px solid var(--line);
+  font-size:12.5px; font-weight:600; color:var(--muted); white-space:nowrap;
+}
+.cat-chip.active{background:var(--golden); color:var(--black); border-color:var(--golden)}
+
+.svc-list{padding:6px 16px 20px; display:flex; flex-direction:column; gap:8px}
+.svc-card{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  background:var(--card); border:1px solid var(--line); border-radius:14px; padding:13px 14px;
+}
+.svc-info{flex:1; min-width:0}
+.svc-cat{font-size:9.5px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:var(--blue); margin-bottom:2px}
+.svc-name{font-size:14.5px; font-weight:600; line-height:1.25}
+.svc-unit{font-size:11.5px; color:var(--muted); margin-top:2px}
+.svc-right{display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex-shrink:0}
+.svc-price{font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:15px; color:var(--golden); white-space:nowrap}
+.svc-add{
+  width:34px; height:34px; border-radius:10px; background:var(--golden); color:var(--black);
+  font-size:19px; font-weight:800; display:flex; align-items:center; justify-content:center;
+  transition:transform .1s;
+}
+.svc-add:active{transform:scale(.88)}
+.svc-add.added{background:var(--blue); color:var(--white)}
+.empty-search{padding:60px 20px; text-align:center; color:var(--muted); font-size:13.5px}
+
+/* ── CUSTOM SERVICE FAB SHEET ── */
+.custom-fab{
+  position:fixed; right:16px; bottom:calc(96px + var(--safe-b)); z-index:15;
+  width:52px; height:52px; border-radius:50%; background:var(--violet); color:var(--white);
+  display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:700;
+  box-shadow:0 6px 18px rgba(123,16,193,.4);
+}
+
+/* ── PROPOSAL SCREEN ── */
+.section-lbl{
+  padding:16px 16px 8px; font-size:11px; font-weight:700; letter-spacing:.8px; color:var(--golden);
+  text-transform:uppercase;
+}
+.item-card{
+  margin:0 16px 10px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:13px 14px;
+}
+.item-top{display:flex; justify-content:space-between; align-items:flex-start; gap:8px; margin-bottom:10px}
+.item-name-wrap{flex:1; min-width:0}
+.item-cat{font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:var(--blue)}
+.item-name{font-size:14.5px; font-weight:700; margin-top:1px}
+.item-unit{font-size:11px; color:var(--muted); margin-top:1px}
+.item-del{width:26px; height:26px; border-radius:8px; background:rgba(255,255,255,.06); color:var(--muted); font-size:14px; flex-shrink:0; display:flex; align-items:center; justify-content:center}
+.item-row{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.item-field{display:flex; flex-direction:column; gap:3px; flex:1; min-width:74px}
+.item-field label{font-size:9px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.4px}
+.item-field input{padding:7px 9px; font-size:13px; font-weight:600; text-align:center; width:100%}
+.qty-stepper{display:flex; align-items:center; gap:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; height:32px}
+.qty-stepper button{width:28px; height:100%; background:var(--card2); font-size:16px; font-weight:700; display:flex; align-items:center; justify-content:center}
+.qty-stepper span{width:26px; text-align:center; font-size:13px; font-weight:700}
+.item-sub{
+  margin-top:10px; padding-top:10px; border-top:1px dashed var(--line);
+  display:flex; justify-content:space-between; align-items:baseline;
+}
+.item-sub .lbl{font-size:11px; color:var(--muted)}
+.item-sub .val{font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:17px; color:var(--golden)}
+.item-sub .val small{font-size:10px; color:var(--violet); font-weight:700; margin-right:6px}
+
+.empty-cart{padding:70px 30px; text-align:center; color:var(--muted)}
+.empty-cart .ic{font-size:38px; margin-bottom:10px; opacity:.6}
+.empty-cart p{font-size:13.5px; line-height:1.5}
+.empty-cart button{margin-top:16px; background:var(--golden); color:var(--black); padding:11px 22px; border-radius:10px; font-weight:700; font-size:13px}
+
+/* ── ADICIONAIS ── */
+.adic-card{
+  margin:0 16px 8px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 14px;
+  display:flex; align-items:center; gap:10px;
+}
+.adic-card.on{border-color:var(--blue); background:rgba(11,130,210,.08)}
+.adic-check{width:22px; height:22px; border-radius:6px; border:2px solid var(--line); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px}
+.adic-card.on .adic-check{background:var(--blue); border-color:var(--blue)}
+.adic-txt{flex:1; min-width:0}
+.adic-title{font-size:13.5px; font-weight:700; display:flex; align-items:center; gap:6px}
+.adic-ref{font-size:10.5px; color:var(--muted); margin-top:1px}
+.adic-pctbox{display:flex; align-items:center; gap:3px; flex-shrink:0}
+.adic-pctbox input{width:46px; padding:6px 4px; text-align:center; font-size:12.5px; font-weight:700}
+
+/* ── DESCONTO GLOBAL + NOTES ── */
+.field-blk{margin:0 16px 14px}
+.field-blk label{display:block; font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px}
+.field-blk textarea{width:100%; min-height:80px; padding:11px 13px; font-size:13.5px; resize:vertical}
+.field-blk input[type=number]{width:110px; padding:9px 12px; font-size:14px; font-weight:700}
+
+/* ── TOTALS STICKY BAR ── */
+.totals-bar{
+  position:fixed; left:0; right:0; bottom:0; z-index:25;
+  background:linear-gradient(180deg, rgba(18,18,18,0) 0%, var(--black) 22%);
+  padding:14px 16px calc(14px + var(--safe-b));
+}
+.totals-inner{
+  background:var(--card); border:1px solid var(--line); border-radius:16px; padding:12px 16px;
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  box-shadow:0 -6px 24px rgba(0,0,0,.4);
+}
+.totals-info{display:flex; flex-direction:column; gap:1px}
+.totals-info .l1{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.5px}
+.totals-info .l2{font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:900; color:var(--golden)}
+.btn-generate{
+  background:var(--golden); color:var(--black); font-weight:800; font-size:13.5px;
+  padding:13px 20px; border-radius:12px; white-space:nowrap;
+}
+.btn-generate:disabled{opacity:.35}
+
+/* ── BOTTOM NAV ── */
+.bottomnav{
+  display:flex; background:#0d0d0d; border-top:1px solid var(--line);
+  padding-bottom:var(--safe-b); flex-shrink:0; z-index:30;
+}
+.nav-btn{
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;
+  padding:9px 4px 8px; color:var(--muted); position:relative;
+}
+.nav-btn .ic{font-size:19px}
+.nav-btn .lbl{font-size:9.5px; font-weight:700; letter-spacing:.2px}
+.nav-btn.active{color:var(--golden)}
+.nav-badge{
+  position:absolute; top:2px; right:22%; background:var(--blue); color:#fff; font-size:9px; font-weight:800;
+  min-width:15px; height:15px; border-radius:8px; display:flex; align-items:center; justify-content:center; padding:0 3px;
+}
+
+/* ── CONFIG SCREEN ── */
+.cfg-group{margin:0 16px 16px}
+.cfg-group label{display:block; font-size:11px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px}
+.cfg-group input, .cfg-group textarea{width:100%; padding:12px 14px; font-size:14px}
+.cfg-group textarea{min-height:64px}
+.cfg-row{display:flex; gap:10px; margin:0 16px 16px}
+.cfg-row .cfg-group{flex:1; margin:0}
+.danger-btn{
+  margin:24px 16px; width:calc(100% - 32px); padding:13px; border-radius:12px;
+  background:rgba(220,60,60,.12); border:1px solid rgba(220,60,60,.35); color:#e06060; font-weight:700; font-size:13px;
+}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed; left:50%; top:calc(14px + var(--safe-t)); transform:translateX(-50%) translateY(-60px);
+  background:var(--golden); color:var(--black); padding:10px 20px; border-radius:24px; font-size:13px; font-weight:700;
+  z-index:100; transition:transform .25s ease; box-shadow:0 6px 20px rgba(0,0,0,.3); white-space:nowrap; max-width:88vw; overflow:hidden; text-overflow:ellipsis;
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ── SHEET (modal-like bottom sheet, used for print confirm) ── */
+.sheet-bg{position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:50; opacity:0; pointer-events:none; transition:opacity .2s}
+.sheet-bg.open{opacity:1; pointer-events:auto}
+.sheet{
+  position:fixed; left:0; right:0; bottom:0; z-index:51; background:var(--card);
+  border-radius:20px 20px 0 0; padding:20px 20px calc(20px + var(--safe-b));
+  transform:translateY(100%); transition:transform .25s ease; max-height:80vh; overflow-y:auto;
+}
+.sheet-bg.open .sheet{transform:translateY(0)}
+.sheet h3{font-size:19px; margin-bottom:14px}
+.sheet-close{position:absolute; top:16px; right:16px; width:30px; height:30px; border-radius:50%; background:var(--card2); font-size:15px}
+
+/* ── PRINT ── */
+#print-view{display:none}
+@media print{
+  body *{visibility:hidden}
+  #print-view, #print-view *{visibility:visible}
+  #print-view{display:block !important; position:absolute; left:0; top:0; width:100%}
+  .screens,.bottomnav,.topbar,.totals-bar,.custom-fab,.toast,.sheet-bg{display:none !important}
+}
+.pp{width:100%; min-height:100vh; background:#121212; color:#F6F6F4; padding:40px 36px; page-break-after:always; font-family:'DM Sans',sans-serif}
+.pp:last-child{page-break-after:auto}
+.pp-h{display:flex; justify-content:space-between; align-items:flex-start; border-bottom:2px solid #FFC525; padding-bottom:16px; margin-bottom:24px}
+.pp-h img{height:26px}
+.pp-h-r{text-align:right}
+.pp-label{font-size:9px; letter-spacing:1px; color:#FFC525; font-weight:700; text-transform:uppercase}
+.pp-num{font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:20px; color:#FFC525; margin-top:2px}
+.pp-date{font-size:10.5px; color:#8a8a86; margin-top:2px}
+.pp-for{font-size:9.5px; letter-spacing:1px; color:#0B82D2; font-weight:700; text-transform:uppercase; margin-bottom:4px}
+.pp-client{font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:30px; text-transform:uppercase}
+.pp-desc{font-size:11.5px; color:#b8b8b4; margin-top:6px; max-width:500px}
+.pp-scope-title,.pp-items-title{font-size:10px; letter-spacing:1px; color:#FFC525; font-weight:700; text-transform:uppercase; border-bottom:1px solid rgba(255,255,255,.15); padding-bottom:8px; margin:26px 0 14px}
+.pp-sblock{margin-bottom:20px}
+.pp-snum{font-family:'Barlow Condensed',sans-serif; font-size:13px; color:#FFC525; font-weight:800}
+.pp-slabel{font-family:'Barlow Condensed',sans-serif; font-size:15px; font-weight:800; text-transform:uppercase; margin:2px 0 6px}
+.pp-stext{font-size:11.5px; line-height:1.6; color:#d6d6d2; white-space:pre-wrap}
+table.pp-table{width:100%; border-collapse:collapse; font-size:11px}
+table.pp-table th{text-align:left; font-size:8.5px; letter-spacing:.5px; text-transform:uppercase; color:#8a8a86; padding:0 0 8px; border-bottom:1px solid rgba(255,255,255,.15)}
+table.pp-table td{padding:10px 0; border-bottom:1px solid rgba(255,255,255,.06); vertical-align:top}
+.pp-tcat{font-size:8px; color:#0B82D2; font-weight:700; text-transform:uppercase}
+.pp-totals{margin-top:18px; margin-left:auto; width:260px}
+.pp-tline{display:flex; justify-content:space-between; font-size:11.5px; padding:5px 0}
+.pp-tline.fin{border-top:2px solid #FFC525; margin-top:6px; padding-top:10px; font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:19px; color:#FFC525}
+.pp-notes{margin-top:26px; font-size:10.5px; color:#8a8a86; line-height:1.7; white-space:pre-wrap}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <img src="data:image/png;base64,data:image/png;base64,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" alt="MVLAB">
+  <button class="cfg-btn" onclick="openSheet('sheet-cfg')">⚙</button>
+</div>
+
+<!-- SCREENS -->
+<div class="screens">
+
+  <!-- CATÁLOGO -->
+  <div class="screen active" id="screen-catalogo">
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="ic">🔍</span>
+        <input type="text" id="q" placeholder="Buscar serviço..." oninput="renderCatalog()">
+      </div>
+    </div>
+    <div class="cat-scroll" id="cat-scroll"></div>
+    <div class="svc-list" id="svc-list"></div>
+    <button class="custom-fab" onclick="openSheet('sheet-custom')">✎</button>
+  </div>
+
+  <!-- PROPOSTA (carrinho) -->
+  <div class="screen" id="screen-proposta">
+    <div class="section-lbl">Itens da Proposta</div>
+    <div id="items-list"></div>
+
+    <div id="adic-section" style="display:none">
+      <div class="section-lbl">Adicionais / Taxas</div>
+      <div class="adic-card" id="adic-urgencia" onclick="toggleAdic('urgencia')">
+        <div class="adic-check">✓</div>
+        <div class="adic-txt">
+          <div class="adic-title">⚡ Taxa de Urgência</div>
+          <div class="adic-ref">Referência: 30–45%</div>
+        </div>
+        <div class="adic-pctbox" onclick="event.stopPropagation()">
+          <input type="number" id="pct-urgencia" value="30" min="1" max="200" oninput="upd()">
+          <span style="font-size:11px;color:var(--muted)">%</span>
+        </div>
+      </div>
+      <div class="adic-card" id="adic-extensao" onclick="toggleAdic('extensao')">
+        <div class="adic-check">✓</div>
+        <div class="adic-txt">
+          <div class="adic-title">✂️ Extensão de Edição</div>
+          <div class="adic-ref">Referência: a partir de 50%</div>
+        </div>
+        <div class="adic-pctbox" onclick="event.stopPropagation()">
+          <input type="number" id="pct-extensao" value="50" min="1" max="200" oninput="upd()">
+          <span style="font-size:11px;color:var(--muted)">%</span>
+        </div>
+      </div>
+      <div class="adic-card" id="adic-diaria" onclick="toggleAdic('diaria')">
+        <div class="adic-check">✓</div>
+        <div class="adic-txt">
+          <div class="adic-title">🕐 Diária Estendida</div>
+          <div class="adic-ref">Referência: a partir de 30%</div>
+        </div>
+        <div class="adic-pctbox" onclick="event.stopPropagation()">
+          <input type="number" id="pct-diaria" value="30" min="1" max="200" oninput="upd()">
+          <span style="font-size:11px;color:var(--muted)">%</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="disc-notes-section" style="display:none">
+      <div class="section-lbl">Desconto Global</div>
+      <div class="field-blk">
+        <label>Percentual (%)</label>
+        <input type="number" id="dpct" value="0" min="0" max="100" step="0.5" oninput="upd()">
+      </div>
+      <div class="section-lbl">Observações</div>
+      <div class="field-blk">
+        <textarea id="pnotes" placeholder="Condições, exclusões, validade extra..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESCOPO -->
+  <div class="screen" id="screen-escopo">
+    <div class="section-lbl">01 · Sobre o Projeto</div>
+    <div class="field-blk" style="margin-top:-6px">
+      <textarea id="scope-projeto" placeholder="Contexto, objetivo, briefing..."></textarea>
+    </div>
+    <div class="section-lbl">02 · Estrutura de Captação</div>
+    <div class="field-blk" style="margin-top:-6px">
+      <textarea id="scope-captacao" placeholder="Equipe, equipamentos, locações, datas..."></textarea>
+    </div>
+    <div class="section-lbl">03 · Resumo dos Entregáveis</div>
+    <div class="field-blk" style="margin-top:-6px">
+      <textarea id="scope-entregaveis" placeholder="Formatos, quantidade, prazos..."></textarea>
+    </div>
+  </div>
+
+</div><!-- /.screens -->
+
+<!-- STICKY TOTALS (visible on proposta screen) -->
+<div class="totals-bar" id="totals-bar" style="display:none">
+  <div class="totals-inner">
+    <div class="totals-info">
+      <div class="l1" id="tot-label">Total</div>
+      <div class="l2" id="tot-value">R$ 0,00</div>
+    </div>
+    <button class="btn-generate" id="btn-gerar" onclick="openSheet('sheet-print')">Gerar PDF</button>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottomnav">
+  <button class="nav-btn active" data-screen="catalogo" onclick="goScreen('catalogo')">
+    <span class="ic">🎬</span><span class="lbl">Catálogo</span>
+  </button>
+  <button class="nav-btn" data-screen="proposta" onclick="goScreen('proposta')">
+    <span class="ic">🧾</span><span class="lbl">Proposta</span>
+    <span class="nav-badge" id="cart-badge" style="display:none">0</span>
+  </button>
+  <button class="nav-btn" data-screen="escopo" onclick="goScreen('escopo')">
+    <span class="ic">📋</span><span class="lbl">Escopo</span>
+  </button>
+</div>
+
+<!-- SHEET: CUSTOM SERVICE -->
+<div class="sheet-bg" id="sheet-custom-bg" onclick="closeSheetBg(event,'sheet-custom')">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <button class="sheet-close" onclick="closeSheet('sheet-custom')">✕</button>
+    <h3>✎ Serviço Personalizado</h3>
+    <div class="field-blk" style="margin:0 0 12px">
+      <label>Nome do Serviço</label>
+      <input type="text" id="c-nome" placeholder="Ex: Drone">
+    </div>
+    <div class="cfg-row" style="margin:0 0 16px">
+      <div class="cfg-group"><label>Unidade</label><input type="text" id="c-unidade" placeholder="diária"></div>
+      <div class="cfg-group"><label>Valor R$</label><input type="number" id="c-valor" placeholder="0,00" min="0" step="0.01"></div>
+    </div>
+    <button class="btn-generate" style="width:100%" onclick="addCustom()">+ Adicionar à Proposta</button>
+  </div>
+</div>
+
+<!-- SHEET: CONFIG -->
+<div class="sheet-bg" id="sheet-cfg-bg" onclick="closeSheetBg(event,'sheet-cfg')">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <button class="sheet-close" onclick="closeSheet('sheet-cfg')">✕</button>
+    <h3>⚙ Configurar</h3>
+    <div class="cfg-group"><label>Cliente</label><input type="text" id="pc" placeholder="Nome do cliente"></div>
+    <div class="cfg-row">
+      <div class="cfg-group"><label>Projeto</label><input type="text" id="pp" placeholder="Referência"></div>
+      <div class="cfg-group"><label>Validade</label><input type="date" id="pv"></div>
+    </div>
+    <div class="cfg-group"><label>Número da Proposta</label><input type="text" id="mn" placeholder="MVLAB-2026-001"></div>
+    <div class="cfg-group"><label>Subtítulo — Página de Escopo</label><textarea id="md-escopo" placeholder="Ex: Apresentamos o escopo da produção..."></textarea></div>
+    <div class="cfg-group"><label>Subtítulo — Página de Valores</label><textarea id="md-valores" placeholder="Ex: Seguem os serviços propostos..."></textarea></div>
+    <div class="cfg-group"><label>Condições de Pagamento</label><input type="text" id="mp" placeholder="50% na aprovação, 50% na entrega"></div>
+    <button class="btn-generate" style="width:100%;margin-top:6px" onclick="closeSheet('sheet-cfg')">Salvar</button>
+    <button class="danger-btn" style="margin:14px 0 0" onclick="clearAll()">🗑 Limpar Proposta</button>
+  </div>
+</div>
+
+<!-- SHEET: CONFIRM PRINT -->
+<div class="sheet-bg" id="sheet-print-bg" onclick="closeSheetBg(event,'sheet-print')">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <button class="sheet-close" onclick="closeSheet('sheet-print')">✕</button>
+    <h3>🖨 Gerar Proposta</h3>
+    <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:18px">
+      O PDF será aberto na tela de impressão do navegador. Confirme o cliente antes de gerar.
+    </p>
+    <div class="field-blk" style="margin:0 0 18px">
+      <label>Cliente</label>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800" id="confirm-client">—</div>
+    </div>
+    <button class="btn-generate" style="width:100%" onclick="doPrint()">Confirmar e Gerar PDF</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- PRINT VIEW -->
+<div id="print-view">
+  <div class="pp" id="pp-scope" style="display:none">
+    <div class="pp-h">
+      <img src="data:image/png;base64,data:image/png;base64,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" alt="MVLAB">
+      <div class="pp-h-r">
+        <div class="pp-label">Proposta Comercial</div>
+        <div class="pp-num" id="pr-num-scope"></div>
+        <div class="pp-date" id="pr-date-scope"></div>
+      </div>
+    </div>
+    <div class="pp-for">Proposta para</div>
+    <div class="pp-client" id="pr-client-scope">—</div>
+    <div class="pp-desc" id="pr-desc-scope"></div>
+    <div class="pp-scope-title">Escopo da Proposta</div>
+    <div class="pp-sblock" id="pps-projeto" style="display:none">
+      <div class="pp-snum">01</div><div class="pp-slabel">Sobre o Projeto</div>
+      <div class="pp-stext" id="pps-projeto-text"></div>
+    </div>
+    <div class="pp-sblock" id="pps-captacao" style="display:none">
+      <div class="pp-snum">02</div><div class="pp-slabel">Estrutura de Captação</div>
+      <div class="pp-stext" id="pps-captacao-text"></div>
+    </div>
+    <div class="pp-sblock" id="pps-entregaveis" style="display:none">
+      <div class="pp-snum">03</div><div class="pp-slabel">Resumo dos Entregáveis</div>
+      <div class="pp-stext" id="pps-entregaveis-text"></div>
+    </div>
+  </div>
+
+  <div class="pp" id="pp-valores">
+    <div class="pp-h">
+      <img src="data:image/png;base64,data:image/png;base64,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" alt="MVLAB">
+      <div class="pp-h-r">
+        <div class="pp-label">Proposta Comercial</div>
+        <div class="pp-num" id="pr-num">MVLAB-001</div>
+        <div class="pp-date" id="pr-date"></div>
+      </div>
+    </div>
+    <div class="pp-for">Proposta para</div>
+    <div class="pp-client" id="pr-client">—</div>
+    <div class="pp-desc" id="pr-desc"></div>
+    <div class="pp-items-title">Itens da Proposta</div>
+    <table class="pp-table">
+      <thead><tr><th>Serviço</th><th>Qtd</th><th>Unidade</th><th style="text-align:right">Val. Unit.</th><th style="text-align:right">Subtotal</th></tr></thead>
+      <tbody id="pr-rows"></tbody>
+    </table>
+    <div class="pp-totals" id="pr-totals"></div>
+    <div class="pp-notes" id="pr-notes"></div>
+  </div>
+</div>
+
+<script>
+const S = [{"cat": "Pré-Produção", "nome": "Diretor", "unidade": "Por diária", "valor": 2500}, {"cat": "Pré-Produção", "nome": "Assistente de Direção", "unidade": "Por diária", "valor": 1800}, {"cat": "Pré-Produção", "nome": "Produção Executiva", "unidade": "Por diária", "valor": 3000}, {"cat": "Pré-Produção", "nome": "Assistente de Produção", "unidade": "Por diária", "valor": 1200}, {"cat": "Produção", "nome": "Diretor de Set", "unidade": "Por diária de até 9h", "valor": 2500}, {"cat": "Produção", "nome": "Filmmaker Sênior", "unidade": "Por diária de até 9h", "valor": 2200}, {"cat": "Produção", "nome": "Filmmaker", "unidade": "Por diária de até 9h", "valor": 2000}, {"cat": "Produção", "nome": "Assistente de Equipe", "unidade": "Por diária de até 9h", "valor": 1600}, {"cat": "Produção", "nome": "Editor In Loco", "unidade": "Por diária de até 9h", "valor": 2200}, {"cat": "Produção", "nome": "Logger", "unidade": "Por diária de até 9h", "valor": 1400}, {"cat": "Produção", "nome": "Assistente Geral", "unidade": "Por diária de até 9h", "valor": 1200}, {"cat": "Produção", "nome": "Operador de Drone", "unidade": "Por diária de até 9h", "valor": 2200}, {"cat": "Produção", "nome": "Storymaker / Mobile", "unidade": "Por diária de até 9h", "valor": 2000}, {"cat": "Fotografia", "nome": "Fotógrafo", "unidade": "Por diária de até 9h", "valor": 2500}, {"cat": "Fotografia", "nome": "Assistente de Fotografia", "unidade": "Por diária de até 9h", "valor": 1200}, {"cat": "Fotografia", "nome": "Fotografia Aérea", "unidade": "Por diária de até 9h", "valor": 2200}, {"cat": "Pós-Produção", "nome": "Edição Same-Day", "unidade": "Por entrega", "valor": 2000}, {"cat": "Pós-Produção", "nome": "Edição BASE", "unidade": "Por vídeo", "valor": 500}, {"cat": "Pós-Produção", "nome": "Edição Reels Simples", "unidade": "Por vídeo até 90s", "valor": 750}, {"cat": "Pós-Produção", "nome": "Edição Reels Pós-Evento", "unidade": "Por vídeo até 90s", "valor": 1200}, {"cat": "Pós-Produção", "nome": "Edição Vídeo HERO", "unidade": "Por vídeo até 180s", "valor": 3000}, {"cat": "Pós-Produção", "nome": "Edição Vídeo Case Institucional", "unidade": "Por vídeo até 180s", "valor": 2800}, {"cat": "Pós-Produção", "nome": "Edição Longform até 5 min", "unidade": "Por vídeo até 5 min", "valor": 1200}, {"cat": "Pós-Produção", "nome": "Edição Longform até 10 min", "unidade": "Por vídeo até 10 min", "valor": 1800}, {"cat": "Pós-Produção", "nome": "Adaptação de Formato de Tela", "unidade": "Por adaptação", "valor": 200}, {"cat": "Pós-Produção", "nome": "Legendagem", "unidade": "Por minuto", "valor": 15.75}, {"cat": "Tabela Itaú", "nome": "Vídeo P (Base Itaú)", "unidade": "Por vídeo", "valor": 480}, {"cat": "Tabela Itaú", "nome": "Vídeo M (Reels Itaú)", "unidade": "Por vídeo", "valor": 735}, {"cat": "Tabela Itaú", "nome": "Vídeo Case até 60s (Itaú)", "unidade": "Por vídeo", "valor": 1155}, {"cat": "Tabela Itaú", "nome": "Vídeo Case até 180s (Itaú)", "unidade": "Por vídeo", "valor": 2020}, {"cat": "Finalização", "nome": "Motion Design (Bloco de 20s)", "unidade": "Por 20s", "valor": 900}, {"cat": "Finalização", "nome": "Color Grading", "unidade": "Por 60s", "valor": 1000}, {"cat": "Finalização", "nome": "Trilha Musical", "unidade": "Por projeto", "valor": 300}, {"cat": "Finalização", "nome": "Locução", "unidade": "Por vídeo até 180s", "valor": 2000}, {"cat": "Equipamentos", "nome": "GoPro", "unidade": "Por câmera", "valor": 600}, {"cat": "Equipamentos", "nome": "Câmera 360", "unidade": "Por câmera", "valor": 900}, {"cat": "Equipamentos", "nome": "Estúdio Móvel", "unidade": "Por estúdio", "valor": 1100}, {"cat": "Equipamentos", "nome": "Chroma Key Móvel", "unidade": "Por estúdio", "valor": 1600}, {"cat": "Equipamentos", "nome": "Pacote de Iluminação Adicional P", "unidade": "Por pacote", "valor": 2100}, {"cat": "Equipamentos", "nome": "Pacote de Iluminação Adicional G", "unidade": "Por pacote", "valor": 4000}, {"cat": "Equipamentos", "nome": "Monitoramento de Vídeo Adicional", "unidade": "Por monitor", "valor": 1000}, {"cat": "Equipamentos", "nome": "Estúdio Grande", "unidade": "Por diária", "valor": 3000}, {"cat": "Equipamentos", "nome": "Estúdio Pequeno", "unidade": "Por diária", "valor": 1800}, {"cat": "Equipamentos", "nome": "Estúdio de Áudio para Locução", "unidade": "Por bloco de gravação", "valor": 900}];
+let items = [], nid = 1;
+let cfg = { num: 'MVLAB-' + new Date().getFullYear() + '-001', descEscopo:'', descValores:'', pay:'30 dias após aprovação da proposta' };
+const cats = [...new Set(S.map(s => s.cat))];
+let aCat = 'all';
+
+function fmt(n){ return n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+// ── NAV ──
+function goScreen(name){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.screen === name));
+  document.getElementById('totals-bar').style.display = (name === 'proposta' && items.length) ? 'block' : 'none';
+}
+
+// ── SHEETS ──
+function openSheet(id){ document.getElementById(id + '-bg').classList.add('open');
+  if(id==='sheet-cfg'){
+    document.getElementById('pc').value = document.getElementById('pc').value || '';
+    document.getElementById('mn').value = cfg.num;
+    document.getElementById('md-escopo').value = cfg.descEscopo;
+    document.getElementById('md-valores').value = cfg.descValores;
+    document.getElementById('mp').value = cfg.pay;
+  }
+  if(id==='sheet-print'){
+    document.getElementById('confirm-client').textContent = document.getElementById('pc').value || 'Cliente não definido';
+  }
+}
+function closeSheet(id){ document.getElementById(id + '-bg').classList.remove('open');
+  if(id==='sheet-cfg'){
+    cfg.num = document.getElementById('mn').value || cfg.num;
+    cfg.descEscopo = document.getElementById('md-escopo').value;
+    cfg.descValores = document.getElementById('md-valores').value;
+    cfg.pay = document.getElementById('mp').value;
+  }
+}
+function closeSheetBg(e, id){ if(e.target.id === id + '-bg') closeSheet(id); }
+
+// ── CATALOG ──
+function renderCatScroll(){
+  const el = document.getElementById('cat-scroll');
+  el.innerHTML = '<button class="cat-chip active" onclick="selCat(this,\'all\')">Todos</button>' +
+    cats.map(c => `<button class="cat-chip" onclick="selCat(this,'${c}')">${c}</button>`).join('');
+}
+function selCat(btn, c){
+  aCat = c;
+  document.querySelectorAll('.cat-chip').forEach(x => x.classList.remove('active'));
+  btn.classList.add('active');
+  renderCatalog();
+}
+function renderCatalog(){
+  const q = document.getElementById('q').value.toLowerCase();
+  const list = document.getElementById('svc-list');
+  const filtered = S.filter(s => (aCat==='all' || s.cat===aCat) && (!q || s.nome.toLowerCase().includes(q) || s.cat.toLowerCase().includes(q)));
+  if(!filtered.length){ list.innerHTML = '<div class="empty-search">Nenhum serviço encontrado</div>'; return; }
+  list.innerHTML = filtered.map(s => {
+    const idx = S.indexOf(s);
+    const inCart = items.some(i => i.nome === s.nome && i.cat === s.cat);
+    return `<div class="svc-card">
+      <div class="svc-info">
+        <div class="svc-cat">${s.cat}</div>
+        <div class="svc-name">${s.nome}</div>
+        <div class="svc-unit">${s.unidade}</div>
+      </div>
+      <div class="svc-right">
+        <div class="svc-price">R$\u00a0${fmt(s.valor)}</div>
+        <button class="svc-add ${inCart?'added':''}" onclick="addSvc(${idx})">${inCart?'✓':'+'}</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+function addSvc(idx){
+  const s = S[idx];
+  const ex = items.find(i => i.nome===s.nome && i.cat===s.cat);
+  if(ex){ ex.qty++; } else { items.push({...s, qty:1, disc:0, rid:nid++}); }
+  renderCatalog(); renderCart(); toast('✓ ' + s.nome.substring(0,36));
+}
+function addCustom(){
+  const nome = document.getElementById('c-nome').value.trim();
+  const unidade = document.getElementById('c-unidade').value.trim() || 'unidade';
+  const valor = parseFloat(document.getElementById('c-valor').value);
+  if(!nome){ document.getElementById('c-nome').focus(); return; }
+  if(!valor || valor<=0){ document.getElementById('c-valor').focus(); return; }
+  items.push({cat:'Personalizado', nome, unidade, valor, qty:1, disc:0, rid:nid++});
+  renderCart(); toast('+ ' + nome.substring(0,36));
+  document.getElementById('c-nome').value=''; document.getElementById('c-unidade').value=''; document.getElementById('c-valor').value='';
+  closeSheet('sheet-custom');
+}
+
+// ── CART / PROPOSTA ──
+function chQty(rid,d){ const it = items.find(i=>i.rid===rid); if(it){ it.qty = Math.max(1, it.qty+d); renderCart(); } }
+function setDisc(rid,val){ const it = items.find(i=>i.rid===rid); if(!it) return; it.disc = Math.min(100,Math.max(0,parseFloat(val)||0)); upd(); }
+function setValor(rid,val){ const it = items.find(i=>i.rid===rid); if(!it) return; const v=parseFloat(val); if(!isNaN(v)&&v>=0){ it.valor=v; upd(); } }
+function remItem(rid){ items = items.filter(i=>i.rid!==rid); renderCart(); renderCatalog(); }
+
+function renderCart(){
+  const list = document.getElementById('items-list');
+  const badge = document.getElementById('cart-badge');
+  const adicSec = document.getElementById('adic-section');
+  const discSec = document.getElementById('disc-notes-section');
+  const totBar = document.getElementById('totals-bar');
+
+  if(!items.length){
+    list.innerHTML = `<div class="empty-cart">
+      <div class="ic">🎬</div>
+      <p>Sua proposta está vazia.<br>Adicione serviços do catálogo.</p>
+      <button onclick="goScreen('catalogo')">Ver Catálogo</button>
+    </div>`;
+    badge.style.display='none'; adicSec.style.display='none'; discSec.style.display='none';
+    if(document.getElementById('screen-proposta').classList.contains('active')) totBar.style.display='none';
+    return;
+  }
+
+  badge.style.display='flex'; badge.textContent = items.reduce((s,i)=>s+i.qty,0);
+  adicSec.style.display='block'; discSec.style.display='block';
+  if(document.getElementById('screen-proposta').classList.contains('active')) totBar.style.display='block';
+
+  list.innerHTML = items.map(it => {
+    const disc = it.disc||0;
+    const valorDesc = it.valor*(1-disc/100);
+    const sub = valorDesc*it.qty;
+    return `<div class="item-card">
+      <div class="item-top">
+        <div class="item-name-wrap">
+          <div class="item-cat">${it.cat}</div>
+          <div class="item-name">${it.nome}</div>
+          <div class="item-unit">${it.unidade}</div>
+        </div>
+        <button class="item-del" onclick="remItem(${it.rid})">✕</button>
+      </div>
+      <div class="item-row">
+        <div class="item-field">
+          <label>Qtd</label>
+          <div class="qty-stepper"><button onclick="chQty(${it.rid},-1)">−</button><span>${it.qty}</span><button onclick="chQty(${it.rid},+1)">+</button></div>
+        </div>
+        <div class="item-field">
+          <label>Valor Unit.</label>
+          <input type="number" value="${it.valor}" min="0" step="0.01" onchange="setValor(${it.rid},this.value)">
+        </div>
+        <div class="item-field">
+          <label>Desc. %</label>
+          <input type="number" value="${disc}" min="0" max="100" onchange="setDisc(${it.rid},this.value)">
+        </div>
+      </div>
+      <div class="item-sub">
+        <span class="lbl">Subtotal</span>
+        <span class="val">${disc>0?`<small>-${disc}%</small>`:''}R$\u00a0${fmt(sub)}</span>
+      </div>
+    </div>`;
+  }).join('');
+  upd();
+}
+
+function toggleAdic(key){
+  const card = document.getElementById('adic-'+key);
+  card.classList.toggle('on');
+  upd();
+}
+function getAdics(){
+  return ['urgencia','extensao','diaria']
+    .filter(k => document.getElementById('adic-'+k).classList.contains('on'))
+    .map(k => ({
+      label: {urgencia:'Taxa de Urgência', extensao:'Extensão de Edição', diaria:'Diária Estendida'}[k],
+      pct: parseFloat(document.getElementById('pct-'+k).value) || 0
+    }));
+}
+
+function upd(){
+  const subBruto = items.reduce((s,i)=>s+i.valor*i.qty,0);
+  const subLiq = items.reduce((s,i)=>{const d=i.disc||0; return s+i.valor*(1-d/100)*i.qty;},0);
+  const dp = parseFloat(document.getElementById('dpct').value)||0;
+  const da = subLiq*(dp/100);
+  const adicList = getAdics();
+  const adicTotal = adicList.reduce((a,x)=>a+subLiq*(x.pct/100),0);
+  const fin = subLiq - da + adicTotal;
+  document.getElementById('tot-value').textContent = 'R$\u00a0' + fmt(fin);
+  document.getElementById('tot-label').textContent = items.length + (items.length===1?' item':' itens') + ' · Total';
+}
+
+function clearAll(){
+  if(!items.length){ closeSheet('sheet-cfg'); return; }
+  if(!confirm('Limpar toda a proposta?')) return;
+  items = []; document.getElementById('dpct').value='0';
+  renderCart(); renderCatalog(); closeSheet('sheet-cfg'); goScreen('catalogo');
+}
+
+// ── TOAST ──
+let toastTimer;
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg.length>44 ? msg.substring(0,44)+'...' : msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 1800);
+}
+
+// ── PRINT ──
+function doPrint(){
+  if(!items.length){ toast('Adicione ao menos um serviço'); return; }
+  const cl = document.getElementById('pc').value || 'Cliente';
+  const pr = document.getElementById('pp').value;
+  const vr = document.getElementById('pv').value;
+  const notes = document.getElementById('pnotes').value;
+  const dp = parseFloat(document.getElementById('dpct').value)||0;
+  const today = new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
+  let valid = '';
+  if(vr){ const vd = new Date(vr+'T12:00:00'); valid = vd.toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'}); }
+
+  const subBruto = items.reduce((s,i)=>s+i.valor*i.qty,0);
+  const subLiq = items.reduce((s,i)=>{const d=i.disc||0; return s+i.valor*(1-d/100)*i.qty;},0);
+  const itemDiscAmt = subBruto - subLiq;
+  const adicList = getAdics();
+  const adicTotal = adicList.reduce((s,a)=>s+subLiq*(a.pct/100),0);
+  const da = subLiq*(dp/100);
+  const fin = subLiq - da + adicTotal;
+
+  document.getElementById('pr-num').textContent = cfg.num;
+  document.getElementById('pr-date').textContent = today;
+  document.getElementById('pr-client').textContent = cl + (pr?' · '+pr:'');
+  document.getElementById('pr-desc').textContent = cfg.descValores || 'Seguem abaixo os serviços audiovisuais propostos pela MVLAB.';
+
+  document.getElementById('pr-rows').innerHTML = items.map(it=>{
+    const disc = it.disc||0, valorDesc = it.valor*(1-disc/100), rowSub = valorDesc*it.qty;
+    return `<tr>
+      <td><div class="pp-tcat">${it.cat}</div>${it.nome}${disc>0?` <span style="color:#7B10C1;font-weight:700">−${disc}%</span>`:''}</td>
+      <td>${it.qty}</td><td>${it.unidade}</td>
+      <td style="text-align:right">${disc>0?`<span style="text-decoration:line-through;opacity:.5;font-size:9.5px">R$\u00a0${fmt(it.valor)}</span><br><span style="color:#7B10C1">R$\u00a0${fmt(valorDesc)}</span>`:`R$\u00a0${fmt(it.valor)}`}</td>
+      <td style="text-align:right">R$\u00a0${fmt(rowSub)}</td>
+    </tr>`;
+  }).join('');
+
+  let tg = `<div class="pp-tline"><span>Subtotal</span><span>R$\u00a0${fmt(subLiq)}</span></div>`;
+  const discTotal = itemDiscAmt + da;
+  if(discTotal>0) tg += `<div class="pp-tline" style="color:#7B10C1"><span>Descontos</span><span>− R$\u00a0${fmt(discTotal)}</span></div>`;
+  adicList.forEach(a => tg += `<div class="pp-tline" style="color:#0B82D2"><span>${a.label} (+${a.pct}%)</span><span>+ R$\u00a0${fmt(subLiq*(a.pct/100))}</span></div>`);
+  tg += `<div class="pp-tline fin"><span>TOTAL</span><span>R$\u00a0${fmt(fin)}</span></div>`;
+  document.getElementById('pr-totals').innerHTML = tg;
+
+  const nl = [];
+  if(valid) nl.push('Validade: '+valid);
+  if(cfg.pay) nl.push('Pagamento: '+cfg.pay);
+  if(notes) nl.push(notes);
+  document.getElementById('pr-notes').innerHTML = nl.length ? `<strong style="color:#F6F6F4">Observações</strong><br>${nl.join('<br>')}` : '';
+
+  const scopeProj = document.getElementById('scope-projeto').value.trim();
+  const scopeCap = document.getElementById('scope-captacao').value.trim();
+  const scopeEnt = document.getElementById('scope-entregaveis').value.trim();
+  const hasScope = !!(scopeProj||scopeCap||scopeEnt);
+  document.getElementById('pp-scope').style.display = hasScope ? 'block' : 'none';
+  if(hasScope){
+    document.getElementById('pr-num-scope').textContent = cfg.num;
+    document.getElementById('pr-date-scope').textContent = today;
+    document.getElementById('pr-client-scope').textContent = cl + (pr?' · '+pr:'');
+    document.getElementById('pr-desc-scope').textContent = cfg.descEscopo || '';
+    document.getElementById('pps-projeto').style.display = scopeProj?'block':'none';
+    document.getElementById('pps-projeto-text').textContent = scopeProj;
+    document.getElementById('pps-captacao').style.display = scopeCap?'block':'none';
+    document.getElementById('pps-captacao-text').textContent = scopeCap;
+    document.getElementById('pps-entregaveis').style.display = scopeEnt?'block':'none';
+    document.getElementById('pps-entregaveis-text').textContent = scopeEnt;
+  }
+
+  closeSheet('sheet-print');
+  setTimeout(()=>window.print(), 250);
+}
+
+// ── INIT ──
+function init(){
+  renderCatScroll();
+  renderCatalog();
+  renderCart();
+  const d = new Date(); d.setDate(d.getDate()+30);
+  document.getElementById('pv').value = d.toISOString().split('T')[0];
+}
+init();
+</script>
+</body>
+</html>
